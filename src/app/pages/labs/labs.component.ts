@@ -31,6 +31,9 @@ export class LabsComponent {
   }
 
   changerHander(event: Event){
+    const input = event.target as HTMLInputElement;
+    const newValue = input.value;
+    this.nombre.set(newValue); //para capturar el valor del signal y aignarlo a la variable
     console.log(event);
   }
 
