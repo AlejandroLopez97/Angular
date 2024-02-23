@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Primer Proyecto en Angular 17</h1>
+  <h2>{{welcome}}</h2>
+  <ul>
+    <li *ngFor="let task in tasks">
+      {{ task }}
+    </li>
+  </ul>
+
+  <hr/>
+  <h2>{{ 'Hola'.repeat(4) }}</h2>
+  <p>La suma de 3 + 3  es {{ 3 + 3 }}</p>
+  <p>Hola soy {{ nombre }} y mi edad es {{ edad }}</p>
+  <hr />
+  <img [src]="persona.avatar" alt="">
+  <input type="text" [value]="persona.edad">
+  <button [disabled]="disabled"> Enviar</button>
+  <p>Persona: {{ persona.nombre}}</p>
+  <hr/>
+  <!-- Eventos con Angular, eventos comunes que se pueden presentar en el front -->
+  <button (click)="clickHandler()"> Click me </button>
+  <button (dblclick)="clickHandler()"> Double Click me </button>
+  <p>(change)</p>
+  <input type="number" [value]="persona.edad" (change)="changerHander($event)">
+  <p>(change)</p>
+  <input type="text" [value]="persona.nombre" (change)="changerHander($event)">
+  <p>(keydown)</p>
+  <input type="text" [value]="persona.nombre" (keydown)="keydownHander($event)">
+  <p>(keydown con teclas en especifico)</p>
+  <input type="text" [value]="persona.nombre" (keydown.shift.t)="clickHandler()">
+  <hr>
+  <h1>Signals</h1>
+</div>
